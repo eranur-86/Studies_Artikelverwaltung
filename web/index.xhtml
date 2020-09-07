@@ -1,15 +1,33 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Artikelverwaltung</title>
     </h:head>
     <h:body>
-        <p><img id="kopf_links" src="" width=""/></p>
+        <p><img id="kopf_links" src="logo_company.jpg" alt="company logo" width="250"/><br/>
+        <figcaption>Foto von Soumil Kumar von Pexels</figcaption>
+        </p>      
         <p id="kopf_rechts">
-            <h:outputText value="#"/><br/>
+            <h:outputText value="#{Unternehmen.name}"/><br/>
+            <h:outputText value="#{Unternehmen.strasse} #{Unternehmen.plz}"/><br/>
+            <h:outputText value="#{Unternehmen.plz} #{Unternehmen.ort}"/><br/>
         </p>
+        <h1>Artikelverwaltung</h1>
+        <h2>Übersicht über alle Artikel</h2>
+        <h:dataTable var="einArtikel" value="#{shop.sortiment}">
+            <h:column>
+                <f:facet name="header">Nr</f:facet>
+                <h:outputText value="{einArtikel.nr}"></h:outputText></h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                <h:outputText value="{einArtikel.name}"></h:outputText></h:column>
+            <h:column>
+                <f:facet name="header">Beschreibung</f:facet>
+                <h:outputText value="{einArtikel.beschreibung}"></h:outputText></h:column>
+        </h:dataTable>
         <h:outputText value="#{artikelspeicher.name}"/>
     </h:body>
 </html>
