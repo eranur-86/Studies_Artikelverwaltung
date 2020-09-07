@@ -17,7 +17,7 @@
         </p>
         <h1>Artikelverwaltung</h1>
         <h2>Übersicht über alle Artikel</h2>
-        <h:dataTable var="einArtikel" value="#{Shop.sortiment}">
+        <h:dataTable var="einArtikel" value="#{Shop.sortiment}" styleClass="artikel" rowClasses="ungerade, gerade">
             <h:column>
                 <f:facet name="header">Nr</f:facet>
                 <h:outputText value="#{einArtikel.nr}"></h:outputText></h:column>

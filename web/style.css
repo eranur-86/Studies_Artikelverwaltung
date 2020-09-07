@@ -3,3 +3,26 @@
     Author     : Thomas
 */
 
+table.artikel {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid grey;
+  padding: 3px;
+  padding-left: 8px;
+}
+
+th {
+  text-align: left;
+  background-color: #CCC;
+}
+
+tr.ungerade {
+  background-color: #EEE;
+}
+
+tr.gerade {
+  background-color: #FFF;
+}
+
