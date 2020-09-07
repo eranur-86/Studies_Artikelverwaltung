@@ -17,18 +17,19 @@
         </p>
         <h1>Artikelverwaltung</h1>
         <h2>Übersicht über alle Artikel</h2>
-        <h:dataTable var="einArtikel" value="#{shop.sortiment}">
+        <h:dataTable var="einArtikel" value="#{Shop.sortiment}">
             <h:column>
                 <f:facet name="header">Nr</f:facet>
-                <h:outputText value="{einArtikel.nr}"></h:outputText></h:column>
+                <h:outputText value="#{einArtikel.nr}"></h:outputText></h:column>
             <h:column>
                 <f:facet name="header">Name</f:facet>
-                <h:outputText value="{einArtikel.name}"></h:outputText></h:column>
+                <h:outputText value="#{einArtikel.name}"></h:outputText></h:column>
             <h:column>
                 <f:facet name="header">Beschreibung</f:facet>
-                <h:outputText value="{einArtikel.beschreibung}"></h:outputText></h:column>
+                <h:outputText value="#{einArtikel.beschreibung}"></h:outputText></h:column>
         </h:dataTable>
-        <h:outputText value="#{artikelspeicher.name}"/>
+        <h:outputText value="#{artikel.name}"/>
     </h:body>
+    <h6>Bitte beachten Sie: Diese Seite ist nur ein Projekt und kein funktionierender Online-Shop</h6>
 </html>
 
