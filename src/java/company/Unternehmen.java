@@ -11,11 +11,11 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class Unternehmen {
     
-    private String name;
-    private String strasse;
-    private int hausnummer;
-    private String plz;
-    private String ort;
+    private String name = "E-Food - Nahrungsergänzungsmittel für Gamer";
+    private String strasse = "Musterstraße";
+    private int hausnummer = 1;
+    private String plz = "90449";
+    private String ort = "Nürnberg";
 
     public String getName() {
         return name;
